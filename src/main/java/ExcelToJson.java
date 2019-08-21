@@ -68,7 +68,7 @@ public class ExcelToJson {
 			return listApplicants;
         } catch (IOException e) {
         	throw new RuntimeException("FAIL! -> message = " + e.getMessage());
-        }
+		}
 	}
 	
 	/**
@@ -77,13 +77,13 @@ public class ExcelToJson {
 	 * @param customers
 	 */
 	private static String convertObjectsToJsonString(List<Applicant> applicants) {
-    	ObjectMapper mapper = new ObjectMapper(); // Converts applicants into a json string
-    	String jsonString = ""; 	
-    	try {
-    		jsonString = mapper.writeValueAsString(applicants);
-    	} catch (JsonProcessingException e) {
-    		e.printStackTrace();
-    	}
-    	return jsonString; 
+		ObjectMapper mapper = new ObjectMapper(); // Converts applicants into a json string
+		String jsonString = ""; 	
+		try {
+			jsonString = mapper.writeValueAsString(applicants);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+    		return jsonString; 
 	}
 }
