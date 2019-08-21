@@ -51,15 +51,15 @@ public class ExcelToJson {
 			        }
 			        if(cell == null)  continue;    
 			        switch(j) {
-			        	case 8:	 applicant.setPhone(hdf.formatCellValue(cell)); 				break;
-			        	case 10: applicant.setFirstName(cell.getStringCellValue());				break;
-			        	case 12: applicant.setLastname(cell.getStringCellValue()); 				break;
+			        	case 8:	 applicant.setPhone(hdf.formatCellValue(cell)); 		break;
+			        	case 10: applicant.setFirstName(cell.getStringCellValue());		break;
+			        	case 12: applicant.setLastname(cell.getStringCellValue()); 		break;
 			        	case 13: applicant.setStreetAddress(hdf.formatCellValue(cell) + " "); 	break;
 			        	case 14: applicant.setStreetAddress(cell.getStringCellValue() + " "); 	break;
-			        	case 15: applicant.setStreetAddress(cell.getStringCellValue()); 		break;
-			        	case 18: applicant.setCity(cell.getStringCellValue()); 					break;
-			        	case 19: applicant.setState(cell.getStringCellValue()); 				break;
-			        	case 20: applicant.setZip(hdf.formatCellValue(cell)); 					break;
+			        	case 15: applicant.setStreetAddress(cell.getStringCellValue()); 	break;
+			        	case 18: applicant.setCity(cell.getStringCellValue()); 			break;
+			        	case 19: applicant.setState(cell.getStringCellValue()); 		break;
+			        	case 20: applicant.setZip(hdf.formatCellValue(cell)); 			break;
 			        }
 			    }
 			    listApplicants.add(applicant); // adds to list of applicants
